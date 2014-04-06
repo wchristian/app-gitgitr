@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>App-gitgitr by genehack</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>App-gitgitr</h1>
+        <h2>Download, build, and install new git releases</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/genehack/app-gitgitr/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/genehack/app-gitgitr/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/genehack/app-gitgitr" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a name="name" class="anchor" href="#name"><span class="octicon octicon-link"></span></a>NAME</h1>
+
+<p>gitgitr - Automatically fetch and build the most recent git.</p>
+
+<h1>
+<a name="version" class="anchor" href="#version"><span class="octicon octicon-link"></span></a>VERSION</h1>
+
+<p>version 0.4</p>
+
+<h1>
+<a name="synopsis" class="anchor" href="#synopsis"><span class="octicon octicon-link"></span></a>SYNOPSIS</h1>
+
+<pre><code>gitgitr
+  -- fetches and builds the most recent version of git
+
+gitgitr -t
+  -- fetches and builds the most recent version of git, and runs the
+     test suite prior to installation
+
+gitgitr -v 1.8.0
+  -- fetches and builds version 1.8.0 of git
+</code></pre>
+
+<h1>
+<a name="description" class="anchor" href="#description"><span class="octicon octicon-link"></span></a>DESCRIPTION</h1>
+
+<p>gitgitr is a tiny utility to simplify building the most recent (or,
+really, any arbitrary) version of git. This is something you probably
+only really need if you're obsessive about running the most recent
+version of git, or if you maintain something like <a href="https://metacpan.org/pod/Git::Wrapper">Git::Wrapper</a>,
+where the ability to quickly install a particular git version comes up
+way more often that you would like.</p>
+
+<h1>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>OPTIONS</h1>
+
+<ul>
+<li>
+<p>--help / -h</p>
+
+<p>Displays basically the same information you're currently soaking in.</p>
+</li>
+<li>
+<p>--no_symlink / -N</p>
+
+<p>Don't symlink /opt/git to the new build directory    </p>
+</li>
+<li>
+<p>--prefix / -p</p>
+
+<p>Installation prefix for the current build. Defaults to
+/opt/git-$GIT_VERSION_NUMBER</p>
+</li>
+<li>
+<p>--reinstall / -r</p>
+
+<p>By default, <code>gitgitr</code> will not build a version that's already
+installed. This flag will force it to build a version even if it is
+already preset.</p>
+</li>
+<li>
+<p>--run_tests / -t</p>
+
+<p>Makes <code>gitgitr</code> run the git test suite after building and before
+installing. If the test suite fails, the build will not be
+installed. Disabled by default because the test suite takes a really
+long time to run.</p>
+</li>
+<li>
+<p>--verbose / -V</p>
+
+<p>Makes <code>gitgitr</code> be a lot more chatty about what it's doing</p>
+</li>
+<li>
+<p>--version / -v</p>
+
+<p>Specifies what version of git to build. Defaults to the most recent
+version as found on the front page of <a href="http://git-scm.com">http://git-scm.com</a></p>
+</li>
+</ul><h1>
+<a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>AUTHOR</h1>
+
+<p>John SJ Anderson <a href="mailto:genehack@genehack.org">genehack@genehack.org</a></p>
+
+<h1>
+<a name="copyright-and-license" class="anchor" href="#copyright-and-license"><span class="octicon octicon-link"></span></a>COPYRIGHT AND LICENSE</h1>
+
+<p>This software is copyright (c) 2014 by John SJ Anderson.</p>
+
+<p>This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.</p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
